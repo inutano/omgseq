@@ -404,12 +404,12 @@ label_id.web	Sample_Name	I7_Index_ID	index	I5_Index_ID	index2	Run	sampling_date.
 004561	004561_B16SV4	D705	ATTCAGAA	D507	CAGGACGT	Run2	2015-04-02 17:30:00	34.460655,132.779185	広島県東広島市高屋うめの辺	広島県東広島市	Higashihiroshima, Hiroshima	工学部G棟裏の桜並木のうちの1本、木の側には人が通る(けもの)道が生じており、人の往来の激しい環境。	5	20150402	近畿大学工学部構内		16.7	0.0	0.0	1.8	南		
 004570	004570_B16SV4	D705	ATTCAGAA	D508	GTACTGAC	Run2	2015-04-09 16:00:00	34.439863,132.919021	広島空港付近道路	広島県三原市	Mihara, Hiroshima		11	20150409	広島空港		10.6	0.5	0.0	2.6	東南東		
 004588	004588_B16SV4	D706	GAATTCGT	D503	CCTATCCT	Run2	2015-04-09 16:00:00	34.439863,132.919021	広島空港付近道路	広島県三原市	Mihara, Hiroshima		11	20150409	広島空港		10.6	0.5	0.0	2.6	東南東		
-004596	004596_B16SV4	D706	GAATTCGT	D502	ATAGAGGC	Run2					Toshima, Tokyo			20150409	本郷								
-004600	004600_B16SV4	D706	GAATTCGT	D504	GGCTCTGA	Run2					Toshima, Tokyo			20150409	本郷	竹林							
+004596	004596_B16SV4	D706	GAATTCGT	D502	ATAGAGGC	Run2	2015-04-09				Toshima, Tokyo			20150409	本郷								
+004600	004600_B16SV4	D706	GAATTCGT	D504	GGCTCTGA	Run2	2015-04-09				Toshima, Tokyo			20150409	本郷	竹林							
 004618	004618_B16SV4	D706	GAATTCGT	D505	AGGCGAAG	Run2	2015-04-09 18:00:00	34.401064,133.082868	広島県三原市館町	広島県三原市	Mihara, Hiroshima	三原駅に隣接した三原城趾の桜より採取。	12	20150409	三原城跡1		10.9	0.0	0.0	1.2	東		
 004626	004626_B16SV4	D706	GAATTCGT	D506	TAATCTTA	Run2	2015-04-10 07:30:00	34.398792,133.085139	広島県三原市城町	広島県三原市	Mihara, Hiroshima	三原城趾のはずれ、元船着き場あとの広場の桜より採取。ここは三原駅から200mほど離れた場所にある。	12	20150410	三原城跡2		11.2	3.5	0.0	1.2	東北東		
-004634	004634_B16SV4	D707	CTGAAGCT	D501	TATAGCCT	Run2					Higashihiroshima, Hiroshima			20150409	白市								
-004642	004642_B16SV4	D706	GAATTCGT	D507	CAGGACGT	Run2					Higashihiroshima, Hiroshima			20150409	白市								
+004634	004634_B16SV4	D707	CTGAAGCT	D501	TATAGCCT	Run2	2015-04-09				Higashihiroshima, Hiroshima			20150409	白市								
+004642	004642_B16SV4	D706	GAATTCGT	D507	CAGGACGT	Run2	2015-04-09				Higashihiroshima, Hiroshima			20150409	白市								
 004651	004651_B16SV4	A708	CACCACAC	A507	TAAGTTCC	Run1	2015-03-31 13:29:00	34.139738,131.469238	山口県山口市吉田	山口県山口市	Yamaguchi, Yamaguchi	山口大学食堂前、人通りが多く、隣に駐車場有	3	20150331	山口県山口市吉田	山口大学食堂前，人通りが多く，隣に駐車場有	20.1	0	0.0	2.6	南東		51
 004669	004669_B16SV4	A707	CCCAACCT	A507	TAAGTTCC	Run1	2015-03-31 14:15:00	34.139738,131.469238	山口県山口市吉田	山口県山口市	Yamaguchi, Yamaguchi	山口大学共育の丘前、山中に有り、標高約50m	2	20150331	山口県山口市吉田	山口大学共育の丘前，山中に有り，標高約50m	19.4	0	0.0	2.0	南南東		58
 004677	004677_B16SV4	A706	AACCCCTC	A504	TAAGACAC	Run1	2015-04-02 10:00:00	35.689999,139.690002	つくば市観音台農林研究団地中央バス停(東行)脇	茨城県つくば市	Tsukuba, Ibaraki	胸高周168cm、農林団地設置当時から植えられていると思われる壮年期の桜 幹には多数の縦割れがあり一部苔も付着 サンプリングした花は幹から南東方向に延びる枝についたもので地上高170cm前後 下は芝生	2	20150402	つくば市観音台2丁目 農林研究団地中央	胸高 周 〜168cm 壮年期	11.9	0	1.0	3.2	東南東	2.66	53
