@@ -69,16 +69,14 @@ module OMGSeq
         env_material: "organic material",
         project_name: "Ohanami Metagenome Project",
         host: "Prunus",
-
+        plant_body_site: "petal",
 
         # option data
         elev: "",
-        air_temp_regm: "",
-        climate_environment: "",
-        humidity_regm: "",
-        plant_body_site: "",
-        radiation_regm: "",
-        rainfall_regm: "",
+        air_temp_regm: entry[17],
+        rainfall_regm: entry[18],
+        radiation_regm: entry[19],
+        humidity_regm: entry[23],
 
         # option fixed
         bioproject_id: "",
