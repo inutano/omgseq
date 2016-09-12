@@ -49,6 +49,11 @@ module OMGSeq
     end
 
     def create_biosample(entry)
+      object = create_biosample_object(entry)
+      biosample_header.map{|field| object[field.to_sym] }
+    end
+
+    def create_biosample_object(entry)
       label    = entry[1].split("/")[0]
       date     = entry[7] || "2015"
       latlon   = entry[8] || "NA"
