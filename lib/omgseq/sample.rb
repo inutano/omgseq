@@ -96,7 +96,7 @@ module OMGSeq
     def bs_air_temp_regm(entry)
       air_temp_regm = entry[17]
       if air_temp_regm && !air_temp_regm.empty?
-        ("%0.1f" % air_temp_regm.to_f).to_s + "˚C"
+        ("%0.1f" % air_temp_regm.to_f).to_s + "oC"
       else
         ""
       end
