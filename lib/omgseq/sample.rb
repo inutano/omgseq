@@ -79,7 +79,7 @@ module OMGSeq
         e = "%0.4f" % ll[1]
         "#{n} N #{e} E"
       else
-        "NA"
+        "not collected"
       end
     end
 
