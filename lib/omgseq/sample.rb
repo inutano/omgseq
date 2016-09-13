@@ -16,7 +16,7 @@ module OMGSeq
     end
 
     def create_submission
-      @data.map{|entry| create_biosample(entry).join("\t") }
+      [biosample_header.join("\t")] + @data.map{|entry| create_biosample(entry).join("\t") }
     end
 
     def data_header
@@ -50,7 +50,7 @@ module OMGSeq
 
     def create_biosample(entry)
       object = create_biosample_object(entry)
-      biosample_header.map{|field| object[field.to_sym] }
+      biosample_header.map{|field| object[field.sub(/\*/,"").to_sym] }
     end
 
     def bs_date(entry)
@@ -179,11 +179,11 @@ module OMGSeq
 
     def biosample_header
       [
-        "sample_name",
-        "sample_title",
+        "*sample_name",
+        "*sample_title",
         "description",
-        "organism",
-        "taxonomy_id",
+        "*organism",
+        "*taxonomy_id",
         "bioproject_id",
         "strain",
         "breed",
@@ -191,14 +191,14 @@ module OMGSeq
         "isolate",
         "label",
         "biomaterial_provider",
-        "collection_date",
-        "env_biome",
-        "env_feature",
-        "env_material",
-        "geo_loc_name",
-        "lat_lon",
-        "project_name",
-        "host",
+        "*collection_date",
+        "*env_biome",
+        "*env_feature",
+        "*env_material",
+        "*geo_loc_name",
+        "*lat_lon",
+        "*project_name",
+        "*host",
         "rel_to_oxygen",
         "samp_collect_device",
         "samp_mat_process",
