@@ -1,3 +1,5 @@
+require 'date'
+
 module OMGSeq
   class Sample
     class << self
@@ -14,9 +16,7 @@ module OMGSeq
     end
 
     def create_submission
-      @data.map do |entry|
-        create_biosample(entry)
-      end
+      @data.map{|entry| create_biosample(entry).join("\t") }
     end
 
     def data_header
@@ -54,10 +54,16 @@ module OMGSeq
     end
 
     def create_biosample_object(entry)
-      label    = entry[1].split("/")[0]
-      date     = entry[7] || "2015"
+      label    = entry[1].split("_")[0]
+      date     = entry[7] ? DateTime.parse(entry[7]).strftime("%Y/%m/%d") : "2015"
       latlon   = entry[8] || "NA"
       location = entry[11] || "Japan"
+
+      air_temp_regm  = entry[17] ? entry[17] + "˚C" : ""
+      rainfall_regm  = entry[18] ? entry[18] + "mm" : ""
+      radiation_regm = entry[19] ? entry[19] + "MJ/m^2" : ""
+      humidity_regm  = entry[23] ? entry[23] + "%" : ""
+
       {
         # required - data
         sample_name: "omgseq_" + label,
@@ -78,10 +84,10 @@ module OMGSeq
 
         # option data
         elev: "",
-        air_temp_regm: entry[17],
-        rainfall_regm: entry[18],
-        radiation_regm: entry[19],
-        humidity_regm: entry[23],
+        air_temp_regm: air_temp_regm,
+        rainfall_regm: rainfall_regm,
+        radiation_regm: radiation_regm,
+        humidity_regm: humidity_regm,
 
         # option fixed
         bioproject_id: "",
@@ -90,19 +96,19 @@ module OMGSeq
         cultivar: "unidentified",
         host_common_name: "Cherry",
         host_taxid: "3754",
-        life_stage: "floweing stage",
-        samp_store_temp: "-80 cd",
-        season_environment: "spring",
+        life_stage: "Floweing stage",
+        samp_store_temp: "-80˚C",
+        season_environment: "Spring",
       }
     end
 
     def biosample_header
       [
-        "*sample_name",
-        "*sample_title",
+        "sample_name",
+        "sample_title",
         "description",
-        "*organism",
-        "*taxonomy_id",
+        "organism",
+        "taxonomy_id",
         "bioproject_id",
         "strain",
         "breed",
@@ -110,14 +116,14 @@ module OMGSeq
         "isolate",
         "label",
         "biomaterial_provider",
-        "*collection_date",
-        "*env_biome",
-        "*env_feature",
-        "*env_material",
-        "*geo_loc_name",
-        "*lat_lon",
-        "*project_name",
-        "*host",
+        "collection_date",
+        "env_biome",
+        "env_feature",
+        "env_material",
+        "geo_loc_name",
+        "lat_lon",
+        "project_name",
+        "host",
         "rel_to_oxygen",
         "samp_collect_device",
         "samp_mat_process",
