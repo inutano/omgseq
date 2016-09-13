@@ -70,7 +70,7 @@ module OMGSeq
         organism: "flower metagenome",
         taxonomy_id: "1385665",
         env_biome: "terrestrial biome",
-        env_feature: "microbial feature",
+        env_feature: "organic feature",
         env_material: "organic material",
         project_name: "Ohanami Metagenome Project",
         host: "Prunus",
