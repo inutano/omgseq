@@ -9,7 +9,7 @@ module OMGSeq
     end
 
     def initialize(data)
-      @data = data
+      @data = self.class.load_data(data)
       @submission = create_submission
     end
 
