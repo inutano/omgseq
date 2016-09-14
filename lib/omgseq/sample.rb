@@ -19,7 +19,7 @@ module OMGSeq
     def submission
       {
         # required - data
-        sample_name:     label,
+        sample_name:     "omgseq_" + label,
         sample_title:    title,
         collection_date: date,
         geo_loc_name:    location,
@@ -67,7 +67,7 @@ module OMGSeq
     protected
 
     def label
-      "omgseq_" + @label.split("_")[0]
+      @label.split("_")[0]
     end
 
     def title
