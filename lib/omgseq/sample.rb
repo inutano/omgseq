@@ -19,6 +19,10 @@ module OMGSeq
       [biosample_header.join("\t")] + @data.map{|entry| create_biosample(entry).join("\t") }
     end
 
+    def create_supplementary
+      [supplementary_header.join("\t")] + @data.map{|entry| create_supplementary_data(entry).join("\t") }
+    end
+
     def data_header
       [
         "label_id.web",
@@ -51,6 +55,11 @@ module OMGSeq
     def create_biosample(entry)
       object = create_biosample_object(entry)
       biosample_header.map{|field| object[field.sub(/\*/,"").to_sym] }
+    end
+
+    def create_supplementary_data(entry)
+      object = create_biosample_object(entry)
+      supplementary_columns.map{|field| object[field.sub(/\*/,"").to_sym] }
     end
 
     def bs_date(entry)
@@ -257,6 +266,32 @@ module OMGSeq
         "water_temp_regm",
         "watering_regm",
         "wet_mass",
+      ]
+    end
+
+    def supplementary_columns
+      [
+        "sample_name",
+        "collection_date",
+        "geo_loc_name",
+        "lat_lon",
+        "air_temp_regm",
+        "humidity_regm",
+        "rainfall_regm",
+        "radiation_regm",
+      ]
+    end
+
+    def supplementary_header
+      [
+        "Sample ID",
+        "Collection date",
+        "Geological location name",
+        "Latitude/Longtitude",
+        "Air temperature",
+        "Humidity",
+        "Rainfall",
+        "Sunlight",
       ]
     end
   end

@@ -5,4 +5,9 @@ namespace :omg do
   task :submission do |t|
     puts OMGSeq::Sample.new(data).create_submission
   end
+
+  desc "Generate supplementary table and output in stdout"
+  task :supplementary do |t|
+    puts OMGSeq::Sample.new(data).create_supplementary
+  end
 end
