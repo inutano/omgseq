@@ -57,10 +57,11 @@ module OMGSeq
         collection_date: date.sub(/T/,"\s"),
         geo_loc_name: location == "Japan" ? location : location.sub(/Japan:/,"").sub(/$/,", Japan"),
         lat_lon: latlon,
-        air_temp_regm: air_temp_regm ? air_temp_regm.sub(/oC/,"˚C") : "not collected",
-        humidity_regm: humidity_regm || "not collected",
-        rainfall_regm: rainfall_regm || "not collected",
-        radiation_regm: radiation_regm ? radiation_regm.sub(/Sunlight:/,"") : "not collected",
+        days_since_blooming: days_since_blooming ? days_since_blooming.sub(/^.+:\s/,"").sub(/\s.+$/,"") : "not collected",
+        air_temp_regm: air_temp_regm ? air_temp_regm.sub(/\s.+$/,"") : "not collected",
+        humidity_regm: humidity_regm ? humidity_regm.sub(/\s.+$/,"") : "not collected",
+        rainfall_regm: rainfall_regm ? rainfall_regm.sub(/\s.+$/,"") : "not collected",
+        radiation_regm: radiation_regm ? radiation_regm.sub(/^.+:/,"").sub(/\s.+$/,"") : "not collected",
       }
     end
 
@@ -108,7 +109,7 @@ module OMGSeq
       if !@latlon.empty?
         ll = @latlon.gsub(/\s/,"").split(",").map{|v| v.to_f }
         if ll[2]
-          ("%0.2f" % ll[2]).to_s + "m"
+          ("%0.2f" % ll[2]).to_s + " m"
         end
       end
     end

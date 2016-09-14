@@ -114,10 +114,10 @@ module OMGSeq
         "Geological location name",
         "Latitude/Longtitude",
         "Days since blooming",
-        "Air temperature",
-        "Humidity",
-        "Rainfall",
-        "Sunlight",
+        "Air temperature (˚C)",
+        "Humidity (%)",
+        "Rainfall (mm)",
+        "Sunlight (MJ/m^2)",
       ]
     end
 
