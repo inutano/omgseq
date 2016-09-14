@@ -9,7 +9,7 @@ module OMGSeq
         obj = Sample.new(d).submission
         submission_column.map{|col| obj[col.intern] }.join("\t")
       end
-      submission_data.unshift(submission_header)
+      submission_data.unshift(submission_header.join("\t"))
     end
 
     def create_supplementary
@@ -17,7 +17,7 @@ module OMGSeq
         obj = Sample.new(d).supplementary
         supplementary_column.map{|col| obj[col.intern] }.join("\t")
       end
-      supplementary_data.unshift(supplementary_header)
+      supplementary_data.unshift(supplementary_header.join("\t"))
     end
 
     def submission_header
